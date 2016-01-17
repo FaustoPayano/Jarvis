@@ -6,6 +6,13 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/themes/materialdesigntheme.textblock.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <materialDesign:DialogHost>
         <Grid>
             <Grid.RowDefinitions>
@@ -16,18 +23,21 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Menu HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3" FontSize="14" Height="40">
+            <Menu HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" FontSize="14" Height="40">
                 <MenuItem Header="File" Height="35">
                     <MenuItem Header="Exit" HorizontalAlignment="Left"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Tools" Height="35">
                 </MenuItem>
             </Menu>
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Grid.Row="1" Grid.Column="1">Assignments</TextBlock>
+            <materialDesign:PopupBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" PlacementMode="BottomAndAlignRightEdges" Margin="0 12 25 0">
+            </materialDesign:PopupBox>
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Grid.Row="1" Grid.Column="0">Employees</TextBlock>
             <materialDesign:ColorZone Mode="PrimaryLight" Grid.Row="2" Grid.Column="0" CornerRadius="4" materialDesign:ShadowAssist.ShadowDepth="Depth1">
-                <ListBox>
+                <ListBox Grid.RowSpan="3" Grid.Column="0">
                     <ListItem></ListItem>
                 </ListBox>
             </materialDesign:ColorZone>
