@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -19,6 +20,10 @@ namespace Jarvis {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void GitHub_OnClick(object sender, RoutedEventArgs e) {
+            Process.Start("https://github.com/FaustoPayano/Jarvis");
         }
     }
 }
