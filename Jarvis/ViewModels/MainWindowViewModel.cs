@@ -12,13 +12,13 @@ namespace Jarvis.ViewModels {
             
         }
 
-        public ReadOnlyObservableCollection<EmployeeViewModel> EmployeesList { get; }
-        public ReadOnlyObservableCollection<Case> CaseList { get; }
+        public ReadOnlyObservableCollection<EmployeeViewModel> EmployeesList { get; set; }
+        public ReadOnlyObservableCollection<Case> CaseList { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) {
+       /* protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        }*/
 
         private void PopulateEmployeeList() {
             
