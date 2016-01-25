@@ -5,23 +5,10 @@ using System.Windows;
 using log4net;
 
 namespace Jarvis.Database {
-    class DatabaseManager {
+    class DatabaseManager : Database {
         private static readonly ILog Log = LogManager.GetLogger(typeof(DatabaseManager));
-        public DatabaseManager() {
-            
-        }
-        /// <summary>
-        /// Checks if Database exists at local directory, if it does not, a database file named "database.db" is created.
-        /// </summary>
-        public void CreateDatabase() {
-            var dbConnection = "database.db";
 
-            if (!File.Exists("database.db")) {
-                var databasePath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "database.db");
-                SQLiteConnection.CreateFile(databasePath);
-                Log.Info("Database did not exist in local directory, new database file created.");
-               CreateEmployeeTable(databasePath);
-            }
+        public DatabaseManager() {
         }
 
         /// <summary>
