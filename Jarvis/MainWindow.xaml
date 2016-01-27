@@ -24,6 +24,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -67,6 +68,8 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </materialDesign:ColorZone>
+            <Label Grid.Row="4" Grid.ColumnSpan="1" Content="Connected to Database:" HorizontalAlignment="Right"/>
+            <Image Name="connectionStatus" Grid.Row="4" Grid.Column="1" Source="Resources/Error_Red.ico"></Image>
         </Grid>
     </materialDesign:DialogHost>
 </Window>

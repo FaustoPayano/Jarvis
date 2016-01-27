@@ -34,7 +34,6 @@ namespace Jarvis {
             }
         }
         private void runWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            MessageBox.Show("Created Database.");
         }
     }
 }

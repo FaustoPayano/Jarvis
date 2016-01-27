@@ -59,5 +59,25 @@ namespace Jarvis.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Continue_Green {
+            get {
+                object obj = ResourceManager.GetObject("Continue_Green", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Error_Red {
+            get {
+                object obj = ResourceManager.GetObject("Error_Red", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

@@ -62,7 +62,7 @@ namespace Jarvis.Database {
         }
 
         public bool CheckIfExists(Uri dbPath) {
-            return File.Exists(dbPath.AbsolutePath);
+            return File.Exists(Path.GetFileName(dbPath.AbsolutePath));
         }
     }
 }
