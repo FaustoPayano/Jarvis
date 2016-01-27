@@ -83,7 +83,7 @@
     <Compile Include="Database\Database.cs" />
     <Compile Include="Models\Case.cs" />
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="Database\DatabaseManager.cs" />
+    <Compile Include="Database\SqlLiteDatabase.cs" />
     <Compile Include="ViewModels\employeeViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Page Include="MainWindow.xaml">

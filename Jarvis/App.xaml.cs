@@ -20,7 +20,7 @@ namespace Jarvis {
             backgroundThread.RunWorkerAsync();
         }
         private void startUpDoWork(object sender, DoWorkEventArgs e) {
-            DatabaseManager dbManager = new DatabaseManager();
+            SqlLiteDatabase dbManager = new SqlLiteDatabase();
             var dbPath = new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "database.db"));
             if (!dbManager.CheckIfExists(dbPath)) {
                 dbManager.CreateDatabase(dbPath);
