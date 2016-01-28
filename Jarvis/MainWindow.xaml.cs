@@ -1,5 +1,11 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using Jarvis.Database;
 using Jarvis.Models;
 using log4net;
 using log4net.Core;
@@ -10,9 +16,15 @@ namespace Jarvis {
     /// </summary>
     public partial class MainWindow : Window {
         private static readonly ILog Log = LogManager.GetLogger(typeof (MainWindow));
-        public MainWindow() {
+        private ImageSource imageGreenSource = new BitmapImage(new Uri("pack://application:,,,/Resources/Continue_Green.ico"));
+        private static SqlLiteDatabase dbPath;
+       
+        public MainWindow(SqlLiteDatabase db = null) {
+
             log4net.Config.XmlConfigurator.Configure();
             InitializeComponent();
+            dbPath = db;
+            ConnectionStatusIcon.Source = imageGreenSource;
         }
 
         private void GitHub_OnClick(object sender, RoutedEventArgs e) {

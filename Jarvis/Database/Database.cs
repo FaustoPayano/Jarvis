@@ -4,13 +4,14 @@ using System.Data.Entity;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using log4net;
 
 namespace Jarvis.Database {
-    abstract class Database {
+    public abstract class Database {
         private static readonly ILog Log = LogManager.GetLogger(typeof (Database));
 
         /// <summary>
@@ -64,5 +65,7 @@ namespace Jarvis.Database {
         public bool CheckIfExists(Uri dbPath) {
             return File.Exists(Path.GetFileName(dbPath.AbsolutePath));
         }
+
+        
     }
 }

@@ -5,7 +5,7 @@ using System.Windows;
 using log4net;
 
 namespace Jarvis.Database {
-    class SqlLiteDatabase : Database {
+   public class SqlLiteDatabase : Database {
         private static readonly ILog Log = LogManager.GetLogger(typeof(SqlLiteDatabase));
 
         public SqlLiteDatabase() {

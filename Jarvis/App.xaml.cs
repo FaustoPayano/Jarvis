@@ -32,8 +32,16 @@ namespace Jarvis {
                 };
                 dbManager.CreateTable(dbPath, "employee", columnDictionary);
             }
+            
         }
         private void runWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        }
+
+        protected override void OnStartup(StartupEventArgs e) {
+            base.OnStartup(e);
+
+            MainWindow mw = new MainWindow();
+            mw.Show();
         }
     }
 }

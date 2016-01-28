@@ -13,9 +13,10 @@ namespace Jarvis.Models {
             CompletedDaily = false;
         }
 
-        public string Name { get; private set; }
-        public string Email { get; private set; }
-        public int TotalCasesReviewed { get; private set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public int TotalCasesReviewed { get; set; }
         public bool CompletedDaily { get; set; }
     }
+
 }
