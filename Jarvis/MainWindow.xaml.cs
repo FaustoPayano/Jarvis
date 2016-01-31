@@ -17,13 +17,12 @@ namespace Jarvis {
     public partial class MainWindow : Window {
         private static readonly ILog Log = LogManager.GetLogger(typeof (MainWindow));
         private ImageSource imageGreenSource = new BitmapImage(new Uri("pack://application:,,,/Resources/Continue_Green.ico"));
-        private static SqlLiteDatabase dbPath;
+        public static string dbPath = "database.db";
        
-        public MainWindow(SqlLiteDatabase db = null) {
+        public MainWindow() {
 
             log4net.Config.XmlConfigurator.Configure();
             InitializeComponent();
-            dbPath = db;
             ConnectionStatusIcon.Source = imageGreenSource;
         }
 

@@ -5,7 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Jarvis.ViewModels {
-    class EmployeeViewModel {
+    public class EmployeeViewModel {
+        public EmployeeViewModel(string name, string email, int totalCases, bool completedDaily) {
 
+            Name = name;
+            Email = email;
+            TotalCases = totalCases;
+            CompletedDaily = completedDaily;
+        }
+
+        public string Name { get; }
+        public string Email { get; }
+        public int TotalCases { get; }
+        public bool CompletedDaily { get; }
     }
 }

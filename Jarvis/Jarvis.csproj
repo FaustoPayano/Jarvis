@@ -81,11 +81,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ActionCommand.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Models\Case.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Database\SqlLiteDatabase.cs" />
-    <Compile Include="ViewModels\employeeViewModel.cs" />
+    <Compile Include="ViewModels\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using Jarvis.Database;
+using Jarvis.ViewModels;
 
 namespace Jarvis {
     /// <summary>
@@ -18,6 +19,10 @@ namespace Jarvis {
             backgroundThread.DoWork += new DoWorkEventHandler(startUpDoWork);
             backgroundThread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(runWorkerCompleted);
             backgroundThread.RunWorkerAsync();
+            var mainWindow = new MainWindow {
+                DataContext = new MainWindowViewModel()
+            };
+            mainWindow.Show();
         }
         private void startUpDoWork(object sender, DoWorkEventArgs e) {
             SqlLiteDatabase dbManager = new SqlLiteDatabase();
@@ -35,13 +40,6 @@ namespace Jarvis {
             
         }
         private void runWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-        }
-
-        protected override void OnStartup(StartupEventArgs e) {
-            base.OnStartup(e);
-
-            MainWindow mw = new MainWindow();
-            mw.Show();
         }
     }
 }
